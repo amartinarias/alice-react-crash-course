@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import Post from './components/Post.jsx'
+import PostList from './components/PostList.jsx'
 
 function App() {
-  return <Post />
+  return <main>
+    <PostList />
+
+  </main>
 }
 
 export default App
