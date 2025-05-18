@@ -3,7 +3,7 @@
 import classes from './NewPost.module.css';
 import { useState } from 'react';
 
-function NewPost({ onClose }) {
+function NewPost({ onClose, onAddPost }) {
     const [enteredBody, setEnteredBody] = useState('')
     const [enteredAuthor, setEnteredAuthor] = useState('')
 
@@ -21,6 +21,7 @@ function NewPost({ onClose }) {
             author: enteredAuthor
         }
         console.log(postData);
+        onAddPost(postData);
         onClose();
     }
     return (
