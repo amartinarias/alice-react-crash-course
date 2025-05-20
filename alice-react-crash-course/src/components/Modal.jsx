@@ -1,11 +1,11 @@
 import classes from './Modal.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Modal(props) {
-    function handleBackdropClick(event) {
-        // Only close if the click is directly on the backdrop, not on its children
-        if (event.target === event.currentTarget) {
-            props.onClose();
-        }
+    const navigate = useNavigate()
+
+    function handleBackdropClick() {
+        navigate('..')
     }
 
     return (
