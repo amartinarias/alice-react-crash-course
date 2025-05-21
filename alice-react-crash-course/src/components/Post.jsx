@@ -1,4 +1,5 @@
 import classes from './Post.module.css';
+import { Link } from 'react-router-dom';
 // const names = ['Alice', 'Bob', 'Charlie'];
 
 // function Post(props) {
@@ -13,10 +14,10 @@ import classes from './Post.module.css';
 
 function Post(props) {
     return (
-        <li className={classes.post}>
+        <Link to="props.id" className={classes.post}>
             <p>{props.author}</p>
             <p>{props.message}</p>
-        </li>
+        </Link>
     )
 }
 export default Post;
